@@ -1,0 +1,9 @@
+{
+  "name": "votd",
+  "version": "1.0.0",
+  "description": "Verse of the Day Plug'n'play by YouVersion",
+  "scripts": {
+  },
+  "author": "Jonathan Williamson",
+  "license": "ISC"
+}
