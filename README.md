@@ -20,7 +20,7 @@ Paste this snippet before the closing </body> tag on your HTML template:
 
 For an example of how to do this, see the `sample.html` file in the repository
 
-![screenshot](https://raw.githubusercontent.com/jon-w1/votd-widget/master/docs/screenshot.png "Example screenshot")
+![screenshot](https://raw.githubusercontent.com/jon-w1/votd-widget/master/docs/example.png "Example screenshot")
 
 ## Contributing
 
