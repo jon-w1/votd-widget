@@ -2,6 +2,8 @@
 
 This project is a pluggable snippet you can insert into any website to add the YouVersion Verse of the Day
 
+![screenshot](https://raw.githubusercontent.com/jon-w1/votd-widget/master/docs/screencapture.png "Example screenshot")
+
 ## Usage
 
 ### Adding VOTD
@@ -19,8 +21,6 @@ Paste this snippet before the closing </body> tag on your HTML template:
 ```
 
 For an example of how to do this, see the `sample.html` file in the repository
-
-![screenshot](https://raw.githubusercontent.com/jon-w1/votd-widget/master/docs/screencapture.png "Example screenshot")
 
 ## Contributing
 
