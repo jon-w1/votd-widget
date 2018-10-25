@@ -18,9 +18,9 @@ function setIframeHeight(id) {
   ifrm.style.visibility = 'visible';
 }
 
-// <iframe id="sample" src="./card.html" onload="setIframeHeight(this.id)" width="100%" style="border: none;"></iframe>
+// <iframe id="sample" src="./index.html" onload="setIframeHeight(this.id)" width="100%" style="border: none;"></iframe>
 
 var container = document.getElementsByClassName('votd-container');
 if (container) {
-  container[0].innerHTML = '<iframe id="sample" src="./card.html" onload="setIframeHeight(this.id)" width="100%" style="border: none;"></iframe>';
+  container[0].innerHTML = '<iframe id="sample" src="./index.html" onload="setIframeHeight(this.id)" width="100%" style="border: none;"></iframe>';
 }

@@ -15,7 +15,7 @@ Paste this snippet where you want the Verse of the Day widget to appear:
 Paste this snippet before the closing </body> tag on your HTML template:
 
 ``` 
-<script src="<URL_TBD>/votd.js"></script>
+<script src="https://exampleapp1.firebaseapp.com/scripts/votd.js"></script>
 ```
 
 For an example of how to do this, see the `sample.html` file in the repository
