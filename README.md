@@ -20,6 +20,8 @@ Paste this snippet before the closing </body> tag on your HTML template:
 
 For an example of how to do this, see the `sample.html` file in the repository
 
+![screenshot](https://raw.githubusercontent.com/jon-w1/votd-widget/master/docs/screenshot.png "Example screenshot")
+
 ## Contributing
 
 Contributions, questions and comments are all welcome and encouraged. 
@@ -31,4 +33,5 @@ Our list of follow-on features include:
 
 ## License
 
-ISC - Copyright 2018 Jonathan Williamson
+Apache License 2.0
+Copyright 2018 Jonathan Williamson
