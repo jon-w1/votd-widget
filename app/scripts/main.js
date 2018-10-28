@@ -20,37 +20,38 @@
 (function() {
   'use strict';
 
-  var response = {
-    "day": 1,
-    "image": {
-      "attribution": "YouVersion",
-      "id": 42
-    },
-    "verse": {
-      "human_reference": "John 3:16",
-      "text": "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",
-      "url": "https://www.bible.com/bible/1/JHN.3.16",
-      "usfms": [
-        "JHN.3.16"
-      ]
-    },
-    "version": {
-      "abbreviation": "KJV",
-      "copyright": "Crown Copyright in UK",
-      "title": "King James Version"
-    }
-  };
-
-  if (response) {
-    try {
-      var ref = document.getElementsByClassName('reference')[0].children[0];
-      ref.innerHTML = response.verse.human_reference + " " + response.version.abbreviation;
-      ref.setAttribute('href', response.verse.url);
-      var verse = document.getElementsByClassName('verse')[0];
-      verse.innerHTML = response.verse.text;
-      document.getElementById('wrapper').setAttribute('style', '');
-    } catch (e) {
-      console.error("An error occurred with the verse of the day snippet--", e);
-    }
+  function getDayOfYear() {
+    var now = new Date();
+    var start = new Date(now.getFullYear(), 0, 0);
+    var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
+    var oneDay = 1000 * 60 * 60 * 24;
+    return Math.floor(diff / oneDay);
   }
+
+  fetch('https://developers.youversionapi.com/1.0/verse_of_the_day/' + getDayOfYear(), {
+    headers: {
+      'X-YouVersion-Developer-Token': '<your_token>',
+      'Accept-Language': 'en',
+      Accept: 'application/json'
+    }
+  })
+  .then(function(result) {
+    return result.json();
+  })
+  .then(function(response) {
+    if (response) {
+      try {
+        var ref = document.getElementsByClassName('reference')[0].children[0];
+        ref.innerHTML = response.verse.human_reference; // + " " + response.version.abbreviation;
+        ref.setAttribute('href', response.verse.url);
+        var verse = document.getElementsByClassName('verse')[0];
+        verse.innerHTML = response.verse.text;
+        document.getElementById('wrapper').setAttribute('style', '');
+      } catch (e) {
+        console.error("An error occurred with the verse of the day snippet--", e);
+      }
+    }
+  });
+
+
 })();
